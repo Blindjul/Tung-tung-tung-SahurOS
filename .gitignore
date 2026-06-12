@@ -1,0 +1,16 @@
+# Compiled outputs (distributed via GitHub Releases)
+release/
+
+# Downloaded source tarballs
+src/
+
+# Build artifacts
+tools/
+output/
+rootfs/bin/busybox
+rootfs/sbin/
+*.o
+*.a
+*.tar.xz
+*.tar.bz2
+*.tar.gz
