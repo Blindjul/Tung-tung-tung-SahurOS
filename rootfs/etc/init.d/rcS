@@ -2,22 +2,13 @@
 # TungOS - Ultra-Lightweight Linux
 # System initialization script
 
-echo ""
-echo "  ████████╗██╗   ██╗ ██████╗ ██╗  ██╗"
-echo "  ╚══██╔══╝██║   ██║██╔═══██╗╚██╗██╔╝"
-echo "     ██║   ██║   ██║██║   ██║ ╚███╔╝ "
-echo "     ██║   ╚██╗ ██╔╝██║   ██║ ██╔██╗ "
-echo "     ██║    ╚████╔╝ ╚██████╔╝██╔╝ ██╗"
-echo "     ╚═╝     ╚═══╝   ╚═════╝ ╚═╝  ╚═╝"
-echo ""
-echo "  TungOS v0.1 Zephyr - Ultra-Lightweight Linux"
-echo ""
+echo "TungOS v0.1 Zephyr starting..."
 
 # Mount essential filesystems
 mount -t proc proc /proc
 mount -t sysfs sysfs /sys
 mount -t devtmpfs devtmpfs /dev
-mkdir -p /dev/pts
+mkdir -p /dev/pts /dev/input
 mount -t devpts devpts /dev/pts
 mount -t tmpfs tmpfs /tmp
 mount -t tmpfs tmpfs /run
@@ -32,14 +23,13 @@ echo "tungos" > /etc/hostname
 [ -e /dev/tty ] || mknod /dev/tty c 5 0
 [ -e /dev/zero ] || mknod /dev/zero c 1 5
 [ -e /dev/fb0 ] || mknod /dev/fb0 c 29 0
+[ -e /dev/input/mice ] || mknod /dev/input/mice c 13 63
+[ -e /dev/input/event0 ] || mknod /dev/input/event0 c 13 64
 
-# Setup console
+# Setup
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin
 export HOME=/root
 export TERM=linux
 
-echo "[TungOS] Starting desktop environment..."
-echo ""
-
-# Auto-start the TungOS desktop
+echo "[TungOS] Starting graphical desktop..."
 exec /bin/tungos-desktop
