@@ -1,14 +1,4 @@
-# Z/OS inittab - Minimal init configuration
-# Format: id:runlevels:action:process
-
-# System initialization
+# TungOS inittab
 ::sysinit:/etc/init.d/rcS
-
-# Start a login shell on the console
-::respawn:-/bin/sh
-
-# What to do at CTRL+ALT+DEL
 ::ctrlaltdel:/sbin/reboot
-
-# What to do when power fails
 ::shutdown:/bin/umount -a -r
