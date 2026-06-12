@@ -1,25 +1,25 @@
 #!/bin/sh
-# Z/OS - Super Lightweight Linux
+# TungOS - Super Lightweight Linux
 # System initialization script
 
 echo ""
 echo "  ╔══════════════════════════════════════════╗"
 echo "  ║                                          ║"
-echo "  ║         ██╗  ████████╗  ██╗              ║"
-echo "  ║         ╚██╗╚══██╔══╝  ██║              ║"
-echo "  ║          ╚██╗  ██║████╗██║              ║"
-echo "  ║          ██╔╝  ██║╚██╔╝██║              ║"
-echo "  ║         ██╔╝   ██║ ╚═╝ ██║              ║"
-echo "  ║         ╚═╝    ╚═╝     ╚═╝              ║"
+echo "  ║   ████████╗██╗   ██╗ ██████╗ ██╗  ██╗   ║"
+echo "  ║   ╚══██╔══╝██║   ██║██╔═══██╗╚██╗██╔╝   ║"
+echo "  ║      ██║   ██║   ██║██║   ██║ ╚███╔╝    ║"
+echo "  ║      ██║   ╚██╗ ██╔╝██║   ██║ ██╔██╗    ║"
+echo "  ║      ██║    ╚████╔╝ ╚██████╔╝██╔╝ ██╗   ║"
+echo "  ║      ╚═╝     ╚═══╝   ╚═════╝ ╚═╝  ╚═╝   ║"
 echo "  ║                                          ║"
-echo "  ║     Z/OS  -  Ultra-Lightweight Linux     ║"
-echo "  ║          Version 0.1 "Zephyr"             ║"
+echo "  ║   TungOS  -  Ultra-Lightweight Linux     ║"
+echo "  ║          Version 0.1 Zephyr              ║"
 echo "  ║                                          ║"
 echo "  ╚══════════════════════════════════════════╝"
 echo ""
 
 # Mount essential filesystems
-echo "[Z/OS] Mounting virtual filesystems..."
+echo "[TungOS] Mounting virtual filesystems..."
 mount -t proc proc /proc
 mount -t sysfs sysfs /sys
 mount -t devtmpfs devtmpfs /dev
@@ -29,8 +29,8 @@ mount -t tmpfs tmpfs /tmp
 mount -t tmpfs tmpfs /run
 
 # Set hostname
-hostname z-os
-echo "z-os" > /etc/hostname
+hostname tungos
+echo "tungos" > /etc/hostname
 
 # Create essential device nodes if devtmpfs didn't
 [ -e /dev/console ] || mknod /dev/console c 5 1
@@ -42,10 +42,10 @@ echo "z-os" > /etc/hostname
 export PATH=/bin:/sbin:/usr/bin:/usr/sbin
 export HOME=/root
 export TERM=linux
-export PS1='\[\033[1;36m\]z/os\[\033[0m\]:\[\033[1;34m\]\w\[\033[0m\]\$ '
+export PS1='\[\033[1;33m\]tungos\[\033[0m\]:\[\033[1;34m\]\w\[\033[0m\]\$ '
 
-echo "[Z/OS] System ready."
-echo "[Z/OS] Kernel: $(uname -r)"
-echo "[Z/OS] Arch:   $(uname -m)"
-echo "[Z/OS] RAM:    $(free | head -2 | tail -1 | awk '{print $2}') KB"
+echo "[TungOS] System ready."
+echo "[TungOS] Kernel: $(uname -r)"
+echo "[TungOS] Arch:   $(uname -m)"
+echo "[TungOS] RAM:    $(free | head -2 | tail -1 | awk '{print $2}') KB"
 echo ""

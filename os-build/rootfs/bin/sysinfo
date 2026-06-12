@@ -1,11 +1,11 @@
 #!/bin/sh
-# Z/OS System Info Command
+# TungOS System Info Command
 echo ""
 echo "  ╔═══════════════════════════════════════╗"
-echo "  ║         Z/OS System Information       ║"
+echo "  ║        TungOS System Information      ║"
 echo "  ╚═══════════════════════════════════════╝"
 echo ""
-echo "  OS:       Z/OS v0.1 \"Zephyr\""
+echo "  OS:       TungOS v0.1 Zephyr"
 echo "  Kernel:   $(uname -r)"
 echo "  Arch:     $(uname -m)"
 echo "  Hostname: $(hostname)"
