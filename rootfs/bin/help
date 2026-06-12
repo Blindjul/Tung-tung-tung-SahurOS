@@ -1,8 +1,8 @@
 #!/bin/sh
-# Z/OS Help Command
+# TungOS Help Command
 echo ""
-echo "  Z/OS Available Commands:"
-echo "  ═════════════════════════"
+echo "  TungOS Available Commands:"
+echo "  ════════════════════════════"
 echo ""
 echo "  File:     ls, cp, mv, rm, mkdir, rmdir, ln, chmod, chown, cat, touch, df, du, tar, gzip, gunzip"
 echo "  Text:     echo, head, tail, wc, grep, find, cut, sort, basename, dirname, tee"
