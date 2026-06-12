@@ -1,0 +1,15 @@
+# Z/OS Profile
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin
+export HOME=/root
+export TERM=linux
+export PS1='\[\033[1;36m\]z/os\[\033[0m\]:\[\033[1;34m\]\w\[\033[0m]\$ '
+
+# Aliases
+alias ll='ls -la'
+alias la='ls -a'
+alias cls='clear'
+
+echo ""
+echo "  Welcome to Z/OS! Type 'help' for available commands."
+echo "  Use 'poweroff' or 'reboot' when done."
+echo ""

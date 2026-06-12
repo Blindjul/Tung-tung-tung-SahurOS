@@ -1,0 +1,14 @@
+#!/bin/sh
+# Z/OS Help Command
+echo ""
+echo "  Z/OS Available Commands:"
+echo "  ═════════════════════════"
+echo ""
+echo "  File:     ls, cp, mv, rm, mkdir, rmdir, ln, chmod, chown, cat, touch, df, du, tar, gzip, gunzip"
+echo "  Text:     echo, head, tail, wc, grep, find, cut, sort, basename, dirname, tee"
+echo "  System:   ps, kill, free, uptime, dmesg, mount, umount, hostname, uname, reboot, poweroff"
+echo "  Shell:    ash (built-in), cd, pwd, export, alias, source"
+echo "  Other:    date, sleep, id, whoami, vi, clear, reset, cpio, dd, test, true, false"
+echo ""
+echo "  Shortcuts: ll='ls -la', la='ls -a', cls='clear'"
+echo ""
