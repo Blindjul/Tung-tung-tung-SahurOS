@@ -1,2 +1,13 @@
 skills/
 node_modules/
+# Large source archives
+*.tar.xz
+*.tar.bz2
+*.tar.gz
+os-build/src/linux-*/
+os-build/src/busybox-*/
+os-build/tools/
+os-build/output/
+os-build/rootfs/bin/
+os-build/rootfs/sbin/
+upload/
